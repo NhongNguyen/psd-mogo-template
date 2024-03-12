@@ -1,0 +1,102 @@
+.story{
+  padding:110px 0px;
+  &-list{
+    @include flexBox(stretch,space-between);
+  }
+  &-item{
+    width: calc(33.33%);
+  }
+  &-item:not(:last-child){
+    margin-right:30px;
+  }
+  &-media{
+    position: relative;
+  }
+  &-image{
+    @include size(380px, 240px);
+    position: relative;
+    object-fit: cover;
+  }
+  &-date{
+    @include flexBox(center,center,column);
+    @include size(60px, 70px);
+    background-color: $third-color;
+    color:white;
+    position: absolute;
+    left:-10px;
+    bottom:10px;
+  }
+  &-date-number{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:5px;
+  }
+  &-content{
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    height: 110px;
+  }
+  &-title{
+    margin-bottom:20px;
+    font-weight: 500;
+    @include textClamp(1);
+  }
+  &-desc{
+  line-height: 1.4;
+  color:$text-color;
+  @include textClamp(2);
+  }
+  &-list-icon{
+    @include flexBox;
+  }
+  &-item-icon{
+    @include flexBox;
+    margin-right:20px;
+  }
+  &-icon{
+    margin-right:7px;
+    color:$third-color;
+  }
+  &-number{
+    margin-right:7px;
+    color:$text-color;
+  }
+  @include maxWidth(767px){
+    &-list{
+      @include touchSlider(95%,10px,30px);
+      
+    }
+    // &-item{
+    //   width: 100%;
+    //   margin-bottom: 30px;
+    // }
+  }
+}
+.map{
+  @include flexBox(center,center,column);
+  padding:57px 0px;
+  background: linear-gradient(to bottom, rgba(white,0.9), rgba(white,0.8)),url("../images/img-map.png") repeat center/cover;
+  &-icon{
+    margin-bottom:18px;
+    color:$primary-color;
+    font-size: 26px;
+  }
+  &-title{
+    font-weight: bold;
+    font-size: 24px;
+    color:$primary-color;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom:22px;
+  }
+  &-title::after{
+    position: absolute;
+    content:"";
+    @include size(60px,3px);
+    background-color: $primary-color;
+    left: 50%;
+    bottom:0;
+    transform:translateX(-50%);
+  }
+}

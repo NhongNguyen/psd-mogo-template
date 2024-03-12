@@ -1,0 +1,50 @@
+.about{
+  // &-list{
+  //   display:flex;
+  //   flex-wrap: wrap;
+  //   .about-item:not(:first-child){
+  //     margin-left:30px;
+  //   }
+  // }
+  padding-top:100px;
+  padding-bottom:115px;
+  background-color: white;
+ 
+  &-list{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+  }
+  &-content{
+    text-transform: uppercase; 
+    color:white;
+    text-align: center;
+  }
+  &-icon{
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  &-title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.4;
+    @include textClamp(2);
+    padding:20px;
+    word-break: break-all;
+  }
+  @include maxWidth(767px){
+    padding-top:50px;
+    padding-bottom:58px;
+    .block-box-desc {
+      font-size: 13px;
+      margin-bottom: 50px;
+    }
+    &-list{
+      @include touchSlider();
+    }
+    &-img{
+      width: 100%;
+    }
+  }
+}
+@include hoverEffect(".about-item",".about-content")

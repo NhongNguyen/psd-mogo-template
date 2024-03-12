@@ -1,0 +1,170 @@
+.footer{
+  &-top{
+    padding: 75px 0px 70px;
+    @include flexBox(stretch, space-between);
+  }
+  &-column{
+    @include flexBox(stretch, space-between,column);
+    width: calc(25% - 25px);
+    &:first-child{
+      width: calc(40% - 25px);
+    }
+    &:nth-child(2){
+      width: calc(35% - 25px);
+    }
+  }
+  &-heading--logo{
+    font-weight: bold;
+    font-size: 46px;
+    color:$text-color;
+  }
+  &-heading{
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  &-main{
+    padding-right:10px;
+  }
+  &-desc{
+    margin-bottom:50px;
+    font-family: $secondary-font;
+    color:$text-color;
+    line-height: 1.4;
+    font-size:15px;
+    padding-top:20px;
+  }
+  &-follower{
+    @include flexBox(end);
+    border-bottom: 1px solid #ccc;
+    padding-bottom:15px;
+    margin-bottom:15px;
+    &-number{
+      font-weight: bold;
+      padding-right:4px;
+      font-size: 18px;
+    }
+    &-text{
+      font-size: 14px;
+      font-weight: 500;
+      font-family: $primary-font;
+    }
+  }
+  &-follow{
+    @include flexBox(center);
+    margin-bottom:35px;
+    &-text{
+      margin-right:23px;
+      color:$text-color;
+    }
+    &-icon{
+      margin-right:20px;
+      color:$third-color;
+      font-size: 17px;
+    }
+  }
+  &-email{
+    @include flexBox;
+    &-input{
+      outline:none;
+      padding:15px;
+      font-size: 15px;
+      color:$text-color;
+      border: 1px solid #ccc;
+      border-right:none;
+    }
+    &-button{
+      background-color: $third-color;
+      font-weight: bold;
+      font-size:14px;
+      color:white;
+      padding:15px 35px;
+      border:hidden;
+      text-transform: uppercase;
+    }
+  }
+  &-image{
+    @include size(120px,80px);
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  &-list{
+    margin-top: 40px;
+  }
+  &-title{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    font-size: 13px;;
+  }
+  &-date{
+    color:$text-color;
+    
+  }
+  &-item{
+    @include flexBox(center,start,row);
+  }
+  &-item:not(:last-child){
+    margin-bottom: 30px;
+  }
+  &-list-column-img{
+    margin-right:2px;
+  }
+  &-list-img{
+    @include flexBox();
+    margin-top:40px;
+  }
+  &-img{
+    @include size(88px,88px);
+    object-fit: cover;
+  }
+  &-img:not(:last-child){
+    padding-bottom:2px;
+  }
+  &-instagram-text{
+    margin-top:22px;
+  }
+  &-bottom{
+    border-top:1px solid #ccc;
+    padding: 25px 0px;
+  }
+  &-design{
+    @include flexBox(stretch,center);
+    &-icon{
+      padding-right:4px;
+    }
+  }
+  @include maxWidth(1023px){
+    &-top{
+      display: block;
+    }
+    &-column:not(:nth-child(99)){
+      width: 100% !important;
+      margin-bottom: 30px;
+    }
+    &-main{
+      padding-right:0px;
+    }
+    &-top{
+      padding: 75px 0px 40px;
+    }
+  }
+  @include maxWidth(374px){
+    &-follow{
+      @include flexBox(stretch,center,column);
+    }
+    &-email{
+      &-input{
+        padding: 10px;
+        font-size: 12px;
+      }
+      &-button{
+        padding: 10px 20px;
+        font-size: 13px;
+      }
+    }
+    &-follow-text {
+      padding-bottom: 10px;
+   }
+  }
+}

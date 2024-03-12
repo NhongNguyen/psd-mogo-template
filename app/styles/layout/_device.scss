@@ -1,0 +1,33 @@
+.device{
+  padding-top: 110px;
+  background: linear-gradient(to bottom, rgba(white,0.7), rgba(white,0.6)),url("../images/img-device-bg.png") no-repeat center/cover;
+  // &-media{
+  //   text-align: center;
+  // }
+  &-img{
+    display: inline-block;
+    margin:0 auto -93 px;
+    @include absoluteCenter("left",relative);
+  }
+  @include maxWidth(767px){
+    padding-top: 50px;
+    &-img{
+      max-width: 80%;
+      margin-bottom: -48px;
+    }
+  }
+  @include maxWidth(424px){
+    padding-top: 50px;
+    &-img{
+      max-width: 80%;
+      margin-bottom: -42px;
+    }
+  }
+  @include maxWidth(374px){
+    padding-top: 50px;
+    &-img{
+      max-width: 80%;
+      margin-bottom: -36px;
+    }
+  }
+}

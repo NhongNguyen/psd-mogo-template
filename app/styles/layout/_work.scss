@@ -1,0 +1,66 @@
+.work{
+  padding-top:110px;
+  &-list{
+    @include flexBox();
+    height:780px;
+  }
+  &-column{
+   width: 25%;
+  }
+  &-item{
+    height: 50%;
+  }
+  .work-item--full{
+    height: 100%;
+  }
+  &-img{
+    @include size(100%, 100%);
+    object-fit: cover;
+    
+  }
+  &-content{
+    padding:10px;
+    height: 100%;
+    text-align: center;
+    color:white;
+  }
+  &-icon{
+    font-size: 30px;
+  }
+  &-title{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    @include textClamp(1);
+  }
+  &-desc{
+    @include textClamp(3);
+  }
+  @include maxWidth(1600px){
+    &-list{
+      height: 600px;
+    }
+  }
+  @include maxWidth(1279px){
+    &-list{
+      flex-wrap: wrap;
+      overflow: hidden;
+      height: auto;
+    }
+    &-column{
+      width:50%;
+    }
+  }
+  @include maxWidth(767px){
+    &-list{
+      flex-wrap: wrap;
+      height: auto;
+    }
+    &-column{
+      width:100%;
+    }
+  }
+}
+@include hoverEffect(".work-item",".work-content",false);
